@@ -1,0 +1,13 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, white, blue) no-repeat;
+   }
+  </style>
+    <h1>
+        Хотите удалить этот ответ?
+    </h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button  type="submit">Удалить ответ</button>
+    </form>
+

@@ -1,0 +1,14 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, white, red) no-repeat;
+   }
+   </style>
+    <h1>
+        <p align="center">
+        Удаление блога<br>
+    </h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p align="center">
+        <button  type="submit">Удалить блог</button>
+    </form>

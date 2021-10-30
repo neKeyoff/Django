@@ -1,0 +1,28 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, black, red) no-repeat;
+   }
+  </style>
+        <h1>
+            <p align="center" style="font-size:35px">
+            Список вопросов
+        </h1>
+        <h2>
+        {% if latest_question_list %}
+            <ul>
+            {% for question in latest_question_list %}
+               <p align="left" style="color:#DC143C; font-size:35px">
+               <p><li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}<br></a></li></p>
+            {% endfor %}
+            </ul>
+
+            {% else %}
+        </h2>
+            <p>Опросов нет.</p>
+        {% endif %}
+
+            <h3>
+                <button  style="height:40px;width:120px" onclick="document.location='create'">Создать вопрос</button>
+                <button  style="height:40px;width:150px" onclick="document.location='create_choice'">Создать вариант</button>
+                <button  style="height:40px;width:120px" onclick="document.location='../blogs'">Блоги</button>
+            </h3>

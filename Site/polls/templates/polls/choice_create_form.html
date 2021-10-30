@@ -1,0 +1,11 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, white, blue) no-repeat;
+   }
+  </style>
+    <h1>Создание Опроса</h1>
+    <form method="post" value="create">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type = "submit" value="create">
+    </form>

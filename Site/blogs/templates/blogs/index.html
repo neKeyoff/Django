@@ -1,0 +1,25 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, black, red) no-repeat;
+   }
+   </style>
+     <h1>
+        <p align="center" style="font-size:35px">
+        Список блогов
+    </h1>
+     <h2>
+        {% if latest_blog_list %}
+            <ul>
+            {% for blog in latest_blog_list %}
+               <p align="left" style="color:#DC143C; font-size:35px">
+               <p><li><a href="{% url 'blogs:detail' blog.id %}">{{ blog.title }}<br></a></li></p>
+            {% endfor %}
+            </ul>
+        {% else %}
+             <p>Блогов нет.</p>
+        {% endif %}
+     </h2>
+    <h4>
+<button  style="height:40px;width:120px" onclick="document.location='create'">Создать блог</button>
+<button  style="height:40px;width:120px" onclick="document.location='../polls'">Опросы</button>
+    </h4>

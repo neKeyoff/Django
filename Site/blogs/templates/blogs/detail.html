@@ -1,0 +1,49 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, white, red) no-repeat;
+   }
+   </style>
+       <style>
+           .blok1, .blok2 {
+                border-radius: 4px;
+           }
+           .blok1 {
+              float:left;
+              width:700px;
+              height:600px;
+              text-align: center;
+              vertical-align: middle;
+          }
+          .blok2 {
+              vertical-align: middle;
+              float:right;
+              width:700px;
+              height:600px;
+              text-align: center;
+          }
+       </style>
+                {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                  <h1>
+                    <p align="center" style="color:#DC143C; font-size:30px">
+                    {{ blog.title }}
+                </h1>
+            <div class="blok1">
+                    <div align="left">
+                    <figure>
+                        <p vertical-align="middle"></p>
+                        <img src="{{ blog.cover.url }}">
+                    </figure>
+                    </div>
+            </div>
+            <div class="blok2">
+                    <div align="left" style="color:black; font-size:20px">
+                        {{ blog.task }}
+                    </div>
+                    <p align="right" style="color:#DC143C; font-size:20px">
+            </div><br>
+                <h3>
+                    <p align="center" style="margin-top: 440px">
+                    <button style="width:350px" onclick="document.location='../'">Назад</button>
+                    <button style="width:350px" onclick="document.location='update'">Редактировать</button>
+                    <button style="width:350px" onclick="document.location='delete'">Удалить</button>
+                </h3>

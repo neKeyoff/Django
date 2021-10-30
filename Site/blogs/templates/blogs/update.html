@@ -1,0 +1,19 @@
+  <style>
+   BODY {
+    background: linear-gradient(to bottom right, white, red) no-repeat;
+   }
+   </style>
+    <h1>
+        <p align="center">
+        Редактирование Блога
+    </h1>
+    <form method="post" enctype="multipart/form-data">
+        <p align="center">
+        {% csrf_token %}
+        {{ form.title }}<br><br>
+        {{ form.task }}<br><br>
+        {{ form.cover }}<br><br>
+        {{ form.pub_date }}<br><br>
+        <span>{{ error }}</span>
+        <button  onclick="document.location='blogs/{{ Blog_id }}'" type="submit">Изменить блог</button>
+    </form>
